@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bgb {
-    background-image: url('/IMG/Lost&Found2.jpg');
+    background-image: url('/public/IMG/Lost&Found2.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
