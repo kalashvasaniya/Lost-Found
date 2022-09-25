@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Found</title>
+  </head>
+  <body>
+    <h1>Fill in details about the item</h1>
+    <form action="" method="post">
+      <div class="userInfo">
+        <h3>Your Details</h3>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your Name"
+          required
+        />
+        <label for="contact">Contact Number</label>
+        <input
+          type="number"
+          name="contact"
+          placeholder="Enter Your Contact Number"
+          id="contact"
+          required
+        />
+      </div>
+      <br />
+      <div class="item">
+        <h3>Item details</h3>
+        <label for="itemName">What You have Found?</label>
+        <input type="text" name="itemName" id="itemName" required />
+        <br />
+        <label for="location">Where Did you find these</label>
+        <input type="text" name="location" id="location" required />
+      </div>
+      <div class="ownerClass">
+        <!-- <h5>Does it contain any Owner Info</h5>
+        <input type="radio" name="ownerPrest" id="yes" />
+        <label for="yes"> Yes </label>
+        <input type="radio" name="ownerPrest" id="no" />
+        <label for="no">No</label> -->
+        <br />
+        <label for="ownerDetails"
+          >Anything related to Owner of item (Name/Reg. Number/etc.)
+          (optional)</label
+        >
+        <input type="text" name="ownerDetails" id="ownerDetails" />
+      </div>
+      <br />
+      <div class="Comment">
+        <label for="description"> Any Other Description</label>
+        <br />
+        <textarea
+          name="description"
+          id="description"
+          cols="40"
+          rows="4"
+        ></textarea>
+      </div>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
