@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Found</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Found</title>
+</head>
+
+<body class="">
+  <div class="">
     <h1>Fill in details about the item</h1>
     <form action="" method="post">
       <div class="userInfo">
         <h3>Your Details</h3>
         <label for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter Your Name"
-          required
-        />
+        <input type="text" name="name" id="name" placeholder="Enter Your Name" required />
         <label for="contact">Contact Number</label>
-        <input
-          type="number"
-          name="contact"
-          placeholder="Enter Your Contact Number"
-          id="contact"
-          required
-        />
+        <input type="number" name="contact" placeholder="Enter Your Contact Number" id="contact" required />
       </div>
       <br />
       <div class="item">
@@ -44,25 +36,20 @@
         <input type="radio" name="ownerPrest" id="no" />
         <label for="no">No</label> -->
         <br />
-        <label for="ownerDetails"
-          >Anything related to Owner of item (Name/Reg. Number/etc.)
-          (optional)</label
-        >
+        <label for="ownerDetails">Anything related to Owner of item (Name/Reg. Number/etc.)
+          (optional)</label>
         <input type="text" name="ownerDetails" id="ownerDetails" />
       </div>
       <br />
       <div class="Comment">
         <label for="description"> Any Other Description</label>
         <br />
-        <textarea
-          name="description"
-          id="description"
-          cols="40"
-          rows="4"
-        ></textarea>
+        <textarea name="description" id="description" cols="40" rows="4"></textarea>
       </div>
       <br />
       <button type="submit">Submit</button>
     </form>
-  </body>
+  </div>
+</body>
+
 </html>
