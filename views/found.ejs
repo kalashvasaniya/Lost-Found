@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Found</title>
+</head>
+
+<body class="text-white bg-black container mt-4 md:mt-16 flex justify-center items-center mx-4 md:mx-0 md:pl-40">
+
+  <div class="md:mx-0 mx-4">
+    <form class="" action="" method="post">
+      <div class="userInfo">
+        <div class="relative mb-4">
+          <label for="name" class="leading-7 text-lg text-white">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Your Name" required
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
+        <div class="relative mb-4">
+          <label for="contact" class="leading-7 text-lg text-white">Contact</label>
+          <input type="number" name="contact" placeholder="Enter Your Contact Number" id="contact" required
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="item">
+        <!-- <label class="leading-7 text-lg underline underline-offset-2 text-gray-400">Item details</label> -->
+
+        <div class="relative mb-4">
+          <label for="itemName" class="leading-7 text-lg text-white">What You have Found?</label>
+          <input type="text" name="itemName" id="itemName" required
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
+        <div class="relative mb-4">
+          <label for="location" class="leading-7 text-lg text-white">Where Did you find these?</label>
+          <input type="text" name="location" id="location" required
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
+
+      </div>
+
+      <div class="ownerClass">
+        <!-- <h5>Does it contain any Owner Info</h5>
+        <input type="radio" name="ownerPrest" id="yes" />
+        <label for="yes"> Yes </label>
+        <input type="radio" name="ownerPrest" id="no" />
+        <label for="no">No</label> -->
+
+        <div class="relative mb-4">
+          <label for="ownerDetails" class="leading-7 text-lg text-white">Anything else (Name/Reg. no.)</label>
+          <input type="text" name="ownerDetails" id="ownerDetails"
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
+      </div>
+
+      <div class="relative mb-4 Comment">
+        <label for="description" class="leading-7 text-lg text-white">Any Other Description</label>
+        <textarea class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8"
+          name="description" id="description" cols="40" rows="4"></textarea>
+      </div>
+
+      <button type="submit"
+        class="text-white bg-[#3f3fff] border-0 py-2 px-6 rounded text-lg hover:bg-[#1f1fff]">Submit</button>
+
+  </div>
+
+
+  </form>
+  </div>
+</body>
+
+</html>
