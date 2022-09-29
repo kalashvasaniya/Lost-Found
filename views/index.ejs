@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Teko:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,8 +34,25 @@
                 <span class="text-[#3f3fff]">FOUR-</span>X
             </div>
 
-            <div class="hidden md:flex space-x-12 items-center">
-                <a href="#" class="text-white font-bold" aria-current="page">CONTACT US</a>
+            <div class="hidden md:flex space-x-16  items-center">
+                <button data-tooltip-target="tooltip-bottom3" data-tooltip-placement="bottom" type="button">
+                    <a href="#" class="text-white font-bold" aria-current="page">CONTACT US</a>
+                </button>
+                <div id="tooltip-bottom3" role="tooltip"
+                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
+                    data-popper-placement="bottom">
+                    Dharansh Neema - 9549325941
+                    <br>
+                    <br>
+                    Yuvraj Sahni - 7838945120
+                    <br>
+                    <br>
+                    Adamya Jha - 9877251425
+                    <br>
+                    <br>
+                    Kalash Vasaniya - 8955137364
+                </div>
+
                 <a
                     href="https://www.canva.com/design/DAFNEG9L8-8/F_hss_tpW4W3Aldz03Ke6Q/view?utm_content=DAFNEG9L8-8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
                     <button class="rounded-2xl p-2 px-4 py-3 text-lg font-bold bg-[#3f3fff] hover:bg-[#1f1fff]">About
@@ -46,7 +65,7 @@
     <!-- Buttons -->
     <div
         class="w-full flex justify-start md:justify-center space-x-12 pl-[4rem] md:pl-[12rem] pt-[7rem] md:pt-[32rem] ">
-        <button
+        <button data-tooltip-target="tooltip-bottom2" data-tooltip-placement="bottom" type="button"
             class="rounded-xl px-4 py-2 md:px-10 md:py-4 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
             <a href="/found">
                 <span class="">
@@ -54,10 +73,29 @@
                 </span>
             </a>
         </button>
-        <button
+        <div id="tooltip-bottom2" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
+            data-popper-placement="bottom">
+            Found something?
+            <br>
+            Click here to report it.
+        </div>
+
+        <!-- ----- -->
+
+        <button data-tooltip-target="tooltip-bottom1" data-tooltip-placement="bottom" type="button"
             class="rounded-xl px-6 py-2 md:px-12 md:py-5 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
-            <a href="/lost"><span>Lost</span></a>
+            <a href="/lost">
+                <span>
+                    Lost
+                </span>
+            </a>
         </button>
+        <div id="tooltip-bottom1" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
+            data-popper-placement="bottom">
+            Hey, Find your lost item!
+        </div>
     </div>
 </body>
 <script src="/script.js"></script>
