@@ -9,7 +9,7 @@
   <title>Found</title>
 </head>
 
-<body class="text-white bg-black container mt-4 md:mt-16 flex justify-center items-center mx-4 md:mx-0 md:pl-40">
+<body class="text-white bg-black container mt-4 md:mt-8 flex justify-center items-center mx-4 md:mx-0 md:pl-40">
 
   <div class="md:mx-0 mx-4">
     <form class="" action="" method="post">
@@ -24,19 +24,23 @@
           <input type="number" name="contact" placeholder="Enter Your Contact Number" id="contact" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
+        <div class="relative mb-4">
+          <label for="email" class="leading-7 text-lg text-white">Mail</label>
+          <input type="email" name="email" placeholder="Enter Your Mail" id="email" required
+            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
+        </div>
       </div>
 
-      <br>
       <br>
 
       <div class="item">
         <div class="relative mb-4">
-          <label for="itemName" class="leading-7 text-lg text-white">What You have Found?</label>
+          <label for="itemName" class="leading-7 text-lg text-white">What have you found?</label>
           <input type="text" name="itemName" id="itemName" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
         <div class="relative mb-4">
-          <label for="location" class="leading-7 text-lg text-white">Where Did you find these?</label>
+          <label for="location" class="leading-7 text-lg text-white">Where did you find it?</label>
           <input type="text" name="location" id="location" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
@@ -46,7 +50,7 @@
       <div class="ownerClass">
         <div class="relative mb-4">
           <label for="ownerDetails" class="leading-7 text-lg text-white">Anything else (Name/Reg. no.)</label>
-          <input type="text" name="ownerDetails" id="ownerDetails"
+          <input type="text" name="ownerDetails" id="ownerDetails" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
       </div>
