@@ -2,6 +2,9 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
+const express = require("express");
+const app = express();
+
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/LostAndFound");
 
@@ -15,10 +18,8 @@ const { storage } = require("./cloudinary");
 const multer = require("multer");
 const upload = multer({ storage });
 
-const express = require("express");
-const app = express();
-
 const path = require("path");
+const { url } = require("inspector");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.set("views", path.join(__dirname, "views"));
@@ -31,20 +32,23 @@ app.get("/found", (req, res) => {
 app.get("/lost", (req, res) => {
   res.render("lost");
 });
-app.post("/found", async (req, res) => {
+app.post("/found", upload.single("image"), async (req, res, next) => {
   const { name, contact, email, itemName, location, ownerinfo, description } =
     req.body;
-  const toUpload = new dataBase({
+  imgurl = req.file.path;
+  imgfilename = req.file.filename;
+  let toUpload = new dataBase({
     name,
     contact,
     email,
     itemName,
+    location,
     ownerinfo,
     description,
+    image: [{ url: imgurl, filename: imgfilename }],
   });
   await toUpload.save();
-  // console.log(name, contact, email, itemName, location, ownerinfo, description);
-  res.redirect("/");
+  res.send(req.file);
 });
 app.listen(3000, () => {
   console.log("On Port 3000!!!");
