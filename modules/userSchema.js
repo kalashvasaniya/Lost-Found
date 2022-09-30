@@ -18,7 +18,6 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   location: String,
-  ownerinfo: String,
   description: String,
   image: [
     {

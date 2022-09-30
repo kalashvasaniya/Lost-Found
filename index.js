@@ -29,12 +29,12 @@ app.get("/", (req, res) => {
 app.get("/found", (req, res) => {
   res.render("found");
 });
-app.get("/lost", (req, res) => {
-  res.render("lost");
+app.get("/lost", async (req, res) => {
+  const userData = await dataBase.find({});
+  res.render("lost", { userData });
 });
 app.post("/found", upload.single("image"), async (req, res, next) => {
-  const { name, contact, email, itemName, location, ownerinfo, description } =
-    req.body;
+  const { name, contact, email, itemName, location, description } = req.body;
   imgurl = req.file.path;
   imgfilename = req.file.filename;
   let toUpload = new dataBase({
@@ -43,7 +43,6 @@ app.post("/found", upload.single("image"), async (req, res, next) => {
     email,
     itemName,
     location,
-    ownerinfo,
     description,
     image: [{ url: imgurl, filename: imgfilename }],
   });
