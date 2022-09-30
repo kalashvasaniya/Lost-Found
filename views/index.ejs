@@ -17,14 +17,15 @@
 
 <style>
     .bgb {
-        background-image: url('/Lost&Found2.jpg');
+        background-image: url('/public/Lost&Found2.jpg');
+        background-image: url('/LostSomething.mp4');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
     }
 </style>
 
-<body class="text-white font-poppins bgb">
+<body class="text-white font-poppins bg-white bgb">
 
     <!-- Navbar -->
     <nav class="fixed py-6 w-full bg-black z-50 toptobottom">
@@ -64,39 +65,52 @@
 
     <!-- Buttons -->
     <div
-        class="w-full flex justify-start md:justify-center space-x-12 pl-[4rem] md:pl-[12rem] pt-[7rem] md:pt-[32rem] ">
-        <button data-tooltip-target="tooltip-bottom2" data-tooltip-placement="bottom" type="button"
-            class="rounded-xl px-4 py-2 md:px-10 md:py-4 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
-            <a href="/found">
-                <span class="">
-                    Found
-                </span>
-            </a>
-        </button>
-        <div id="tooltip-bottom2" role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
-            data-popper-placement="bottom">
-            Found something?
-            <br>
-            Click here to report it.
-        </div>
-
-        <!-- ----- -->
-
-        <button data-tooltip-target="tooltip-bottom1" data-tooltip-placement="bottom" type="button"
-            class="rounded-xl px-6 py-2 md:px-12 md:py-5 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
-            <a href="/lost">
-                <span>
-                    Lost
-                </span>
-            </a>
-        </button>
-        <div id="tooltip-bottom1" role="tooltip"
-            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
-            data-popper-placement="bottom">
-            Hey, Find your lost item!
-        </div>
+        class="w-full flex h-[100%] justify-start md:justify-center space-x-12 pl-[4rem] md:pl-[12rem] pt-[37rem] md:pt-[47rem] ">
     </div>
+
+    <div class="containe bg-black flex w-full">
+        <div class="flex flex-wrap  lg:ml-36 justify-center md:justify-start max-w-xl mt-32 md:my-48 ">
+            <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left righttoleft">
+                Find Your <br> Lost & Found item!</h1>
+            <div class="w-full flex justify-center md:justify-start righttoleft space-x-4">
+
+                <!-- Button content -->
+                <button data-tooltip-target="tooltip-bottom2" data-tooltip-placement="bottom" type="button"
+                    class="rounded-xl px-4 py-2 md:px-10 md:py-4 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
+                    <a href="/found">
+                        <span class="">
+                            Found
+                        </span>
+                    </a>
+                </button>
+                <div id="tooltip-bottom2" role="tooltip"
+                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
+                    data-popper-placement="bottom">
+                    Found something?
+                    <br>
+                    Click here to report it.
+                </div>
+                <button data-tooltip-target="tooltip-bottom1" data-tooltip-placement="bottom" type="button"
+                    class="rounded-xl px-6 py-2 md:px-12 md:py-5 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
+                    <a href="/lost">
+                        <span>
+                            Lost
+                        </span>
+                    </a>
+                </button>
+                <div id="tooltip-bottom1" role="tooltip"
+                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg tooltip dark:bg-gray-700"
+                    data-popper-placement="bottom">
+                    Hey, Find your lost item!
+                </div>
+            </div>
+        </div>
+        <div class="pt-44 pl-40">
+            <!-- <img src="/public/piclost&found.png" alt="Kalash"
+                class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright"> -->
+            <img src="/piclost&found.png" alt="Kalash"
+                class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright">
+        </div>
 </body>
 <script src="/script.js"></script>
 <script src="/views/found.ejs"></script>
