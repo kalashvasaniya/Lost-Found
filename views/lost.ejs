@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Lost The Product</title>
+  </head>
+  <body>
+    <h1>All the Lost Item will be displayed here!!</h1>
+    <div class="image">
+      <% for(let data of userData){ %> <% for(let i of data.image) {%>
+      <img src="<%=i.url%> " alt="<%=i.filename%>" srcset="" />
+      <% } %> <% } %>
+    </div>
+  </body>
+</html>
