@@ -20,7 +20,24 @@ app.get("/", (req, res) => {
 app.get("/found", (req, res) => {
   res.render("found");
 });
-
+app.get("/lost", (req, res) => {
+  res.render("lost");
+});
+app.post("/found", async (req, res) => {
+  const { name, contact, email, itemName, location, ownerinfo, description } =
+    req.body;
+  const toUpload = new dataBase({
+    name,
+    contact,
+    email,
+    itemName,
+    ownerinfo,
+    description,
+  });
+  await toUpload.save();
+  // console.log(name, contact, email, itemName, location, ownerinfo, description);
+  res.redirect("/");
+});
 app.listen(3000, () => {
   console.log("On Port 3000!!!");
 });
