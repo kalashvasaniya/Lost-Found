@@ -16,27 +16,38 @@
 </head>
 
 <style>
-    .bgb {
-        background-image: url('/public/Lost&Found2.jpg');
-        background-image: url('/LostSomething.mp4');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+    html,
+    body {
+        scroll-behavior: smooth;
+    }
+
+    [id] {
+        scroll-margin-top: 100px;
+    }
+
+    @media (min-width: 1000px) {
+        .bgb {
+            background-image: url('/public/Lost&Found2.jpg');
+            background-image: url('/LostSomething.mp4');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
     }
 </style>
 
-<body class="text-white font-poppins bg-white bgb">
+<body class="text-white font-poppins bg-black bgb">
 
     <!-- Navbar -->
     <nav class="fixed py-6 w-full bg-black z-50 toptobottom">
         <div
             class="container flex items-center justify-center md:justify-between mx-auto px-8 md:px-14 lg:px-20 w-full">
-            <div class="text-3xl font-semibold text-white">
+            <div class="md:text-3xl text-3xl font-semibold text-white">
                 <span class="text-[#3f3fff]">FOUR-</span>X
             </div>
 
-            <div class="hidden md:flex space-x-16  items-center">
-                <button data-tooltip-target="tooltip-bottom3" data-tooltip-placement="bottom" type="button">
+            <div class="hidden md:flex space-x-10 items-center">
+                <!-- <button data-tooltip-target="tooltip-bottom3" data-tooltip-placement="bottom" type="button">
                     <a href="#" class="text-white font-bold" aria-current="page">CONTACT US</a>
                 </button>
                 <div id="tooltip-bottom3" role="tooltip"
@@ -52,29 +63,33 @@
                     <br>
                     <br>
                     Kalash Vasaniya - 8955137364
-                </div>
+                </div> -->
 
-                <a
-                    href="https://www.canva.com/design/DAFNEG9L8-8/F_hss_tpW4W3Aldz03Ke6Q/view?utm_content=DAFNEG9L8-8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
-                    <button class="rounded-2xl p-2 px-4 py-3 text-lg font-bold bg-[#3f3fff] hover:bg-[#1f1fff]">About
-                        us</button>
-                </a>
+                <button>
+                    <a href="#about">
+                        <button class="rounded-2xl p-2 px-4 py-3 text-xl font-extrabold">About
+                            us</button>
+                    </a>
+                    <a href="#lost&found"
+                        class="text-white rounded-2xl p-2 px-4 py-3 bg-[#3f3fff] hover:bg-[#1f1fff] font-extrabold text-lg"
+                        aria-current="page">Lost &
+                        Found</a>
             </div>
         </div>
     </nav>
 
     <!-- Buttons -->
     <div
-        class="w-full flex h-[100%] justify-start md:justify-center space-x-12 pl-[4rem] md:pl-[12rem] pt-[37rem] md:pt-[47rem] ">
+        class="w-full flex justify-start md:justify-center space-x-12 pl-[4rem] md:pl-[12rem] pt-[2rem] md:pt-[47rem] ">
     </div>
 
-    <div class="containe bg-black flex w-full">
-        <div class="flex flex-wrap  lg:ml-36 justify-center md:justify-start max-w-xl mt-32 md:my-48 ">
-            <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left righttoleft">
-                Find Your <br> Lost & Found item!</h1>
-            <div class="w-full flex justify-center md:justify-start righttoleft space-x-4">
+    <div id="lost&found" class="bg-black flex w-full py-52 md:py-0">
+        <div class="flex flex-wrap ml-24 lg:ml-36 justify-center md:justify-start max-w-xl mt-32 md:my-48">
+            <h1 class="font-bold text-5xl md:text-7xl text-center md:text-left ml-10">
+                Find Your <br> Lost item <br> Here!!!</h1>
 
-                <!-- Button content -->
+            <!-- Button content -->
+            <div class="w-full flex justify-center md:justify-start righttoleft space-x-4 ml-10">
                 <button data-tooltip-target="tooltip-bottom2" data-tooltip-placement="bottom" type="button"
                     class="rounded-xl px-4 py-2 md:px-10 md:py-4 text-white text-2xl font-bold mt-12 space-x-3 bg-[#3f3fff] hover:bg-[#1f1fff]">
                     <a href="/found">
@@ -105,12 +120,68 @@
                 </div>
             </div>
         </div>
-        <div class="pt-44 pl-40">
+        <div class="pt-44 ml-36">
             <!-- <img src="/public/piclost&found.png" alt="Kalash"
                 class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright"> -->
-            <img src="/piclost&found.png" alt="Kalash"
-                class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright">
+            <img src="/piclost&found.png" alt="Kalash" class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright invisible md:visible">
         </div>
+    </div>
+
+    <div class=" bg-black w-full flex h-[100%] justify-start md:justify-center space-x-12">
+    </div>
+
+    <!-- about us -->
+    <div class="py-32 bg-black">
+        <h2
+            class="flex justify-center bg-black font-extrabold text-4xl uppercase underline decoration-gray-400 underline-offset-8">
+            overview</h2>
+        <div id="about" class="containe bg-black flex w-full">
+            <div class="flex justify-center mt-24 mx-24 text-2xl">
+                The project enables users to identify and find the things that they have lost in the past. The project
+                is intended to assist VIT students in locating misplaced belongings. It is well known that students
+                frequently move from their dormitory to academic buildings without regard to the course of the day.
+                <br>
+                <br>
+                As such, it is common to misplace stuff in the midst of the chaos. Unfortunately, there is no
+                platform available to locate these misplaced items. As a result, we took it upon ourselves to devise a
+                solution to this problem via our website. Students can use it to conveniently locate misplaced goods
+                around the campus. The items that students have discovered on campus but do not own can also be listed
+                on the website for the benefit of other students.
+                <br>
+                <br>
+                It will help the students immensely as it
+                creates an ecosystem where all misplaced and found items will be available under one single platform.
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div class="flex justify-between items-center bg-slate-900">
+        <footer class="text-white flex sm:flex-nowrap flex-wrap sm:justify-between justify-center">
+
+            <div class="p-5">
+                <p class="text-base text-white border-l-2">
+                    <span class="ml-4">
+                        Copyrights © Team FOUR-X.
+                    </span>
+                </p>
+            </div>
+
+            <div class="p-5">
+                <p class="text-base text-white">
+                    <button>
+                        <span
+                            class="font-extrabold bg-[#3f3fff] p-2 md:p-3 transition ease-linear delay-150 duration-300 hover:bg-[#1f1fff] ">
+                            <a href="https://6z236yooyhh.typeform.com/to/WP5J4BH1" target="_blank">
+                                Feedback
+                            </a>
+                        </span>
+                    </button>
+                </p>
+            </div>
+
+        </footer>
+    </div>
 </body>
 <script src="/script.js"></script>
 <script src="/views/found.ejs"></script>
