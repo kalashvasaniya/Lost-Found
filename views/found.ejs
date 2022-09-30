@@ -9,21 +9,48 @@
   <title>Found</title>
 </head>
 
-<body class="text-white bg-black container mt-4 md:mt-8 flex justify-center items-center mx-4 md:mx-0 md:pl-40">
+<style>
+  html,
+  body {
+      scroll-behavior: smooth;
+  }
 
-  <div class="md:mx-0 mx-4">
-    <form action="/found" method="post" enctype="multipart/form-data">
+  [id] {
+      scroll-margin-top: 100px;
+  }
+
+  @media (min-width: 1000px) {
+      .bgb {
+          background-image: url('/public/Lost&Found2.jpg');
+          background-image: url('/public/');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+      }
+  }
+</style>
+
+<body class="text-white bg-black container mt-4 md:mt-8 flex justify-center items-center mx-4 md:mx-0 md:pl-40 bgb">
+
+  <div class="md:mx-0 mx-4 text-white">
+    <h2 class="flex justify-center font-extrabold text-4xl uppercase underline decoration-gray-400 underline-offset-8">
+      Found an item!</h2>
+    <form class="dark:bg-slate-900 mt-12 relative rounded-xl p-6" action="/found" method="post"
+      enctype="multipart/form-data">
       <div class="userInfo">
+
         <div class="relative mb-4">
           <label for="name" class="leading-7 text-lg text-white">Name</label>
           <input type="text" name="name" id="name" placeholder="Enter Your Name" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
+
         <div class="relative mb-4">
           <label for="contact" class="leading-7 text-lg text-white">Contact</label>
           <input type="number" name="contact" placeholder="Enter Your Contact Number" id="contact" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
+
         <div class="relative mb-4">
           <label for="email" class="leading-7 text-lg text-white">Mail</label>
           <input type="email" name="email" placeholder="Enter Your Mail" id="email" required
@@ -36,21 +63,13 @@
       <div class="item">
         <div class="relative mb-4">
           <label for="itemName" class="leading-7 text-lg text-white">What have you found?</label>
-          <input type="text" name="itemName" id="itemName" required
-            class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
-        </div>
-        <div class="relative mb-4">
-          <label for="location" class="leading-7 text-lg text-white">Where did you find it?</label>
-          <input type="text" name="location" id="location" required
+          <input type="text" name="itemName" id="itemName" placeholder="Eg: Bottle" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
 
-      </div>
-
-      <div class="ownerClass">
         <div class="relative mb-4">
-          <label for="ownerDetails" class="leading-7 text-lg text-white">Anything else (Name/Reg. no.)</label>
-          <input type="text" name="ownerDetails" id="ownerDetails" required
+          <label for="location" class="leading-7 text-lg text-white">Where/When did you find it?</label>
+          <input type="text" name="location" id="location" placeholder="Eg: SJT-301" required
             class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
         </div>
       </div>
@@ -58,12 +77,13 @@
       <div class="relative mb-4 Comment">
         <label for="description" class="leading-7 text-lg text-white">Any Other Description</label>
         <textarea class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8"
-          name="description" id="description" cols="40" rows="4"></textarea>
+          name="description" id="description" cols="40" rows="2"></textarea>
       </div>
 
       <div class="relative mb-4">
-        <label for="image">Submit your Image</label>
-        <input type="file" name="image" id="image" />
+        <label for="image" class="leading-7 text-lg text-white">Submit your Image</label>
+        <input type="file" name="image" id="image" required
+          class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8">
       </div>
 
       <button type="submit"
