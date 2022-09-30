@@ -12,7 +12,7 @@
 <body class="text-white bg-black container mt-4 md:mt-8 flex justify-center items-center mx-4 md:mx-0 md:pl-40">
 
   <div class="md:mx-0 mx-4">
-    <form class="" action="" method="post">
+    <form action="/found" method="post" enctype="multipart/form-data">
       <div class="userInfo">
         <div class="relative mb-4">
           <label for="name" class="leading-7 text-lg text-white">Name</label>
@@ -59,6 +59,11 @@
         <label for="description" class="leading-7 text-lg text-white">Any Other Description</label>
         <textarea class="w-full bg-gray-800 rounded border border-gray-700 text-sm text-gray-100 py-1 px-3 leading-8"
           name="description" id="description" cols="40" rows="4"></textarea>
+      </div>
+
+      <div class="relative mb-4">
+        <label for="image">Submit your Image</label>
+        <input type="file" name="image" id="image" />
       </div>
 
       <button type="submit"

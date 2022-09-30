@@ -20,5 +20,11 @@ const userSchema = new mongoose.Schema({
   location: String,
   ownerinfo: String,
   description: String,
+  image: [
+    {
+      url: String,
+      filename: String,
+    },
+  ],
 });
 module.exports = mongoose.model("foundData", userSchema);
