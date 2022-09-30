@@ -1,3 +1,20 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/LostAndFound");
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const dataBase = require("./modules/userSchema");
+
+const { storage } = require("./cloudinary");
+const multer = require("multer");
+const upload = multer({ storage });
+
 const express = require("express");
 const app = express();
 
