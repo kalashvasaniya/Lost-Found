@@ -35,9 +35,23 @@
 
         </div>
 
-        <!-- <button><a href="/edit/<%= userInfo.id %> ">Edit</a></button>
-        <button><a href="/lost">Go Back</a></button>
-        <button><a href="/">Home Page</a></button> -->
+        <div class="flex space-x-4 md:space-x-10 p-16 md:p-20 justify-center">
+            <button>
+                <a href="/edit/<%= userInfo.id %> ">Edit</a>
+            </button>
+            <button>
+                <a href="/lost">Back</a>
+            </button>
+            <button>
+                <a href="/">Home</a>
+            </button>
+            <form action="/delete/<%= userInfo._id %>?_method=DELETE" method="post">
+                <button type="submit">
+                    Delete
+                </button>
+            </form>
+        </div>
+
 </body>
 
 </html>

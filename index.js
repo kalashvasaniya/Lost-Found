@@ -18,6 +18,9 @@ const { storage } = require("./cloudinary");
 const multer = require("multer");
 const upload = multer({ storage });
 
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
 const path = require("path");
 const { url } = require("inspector");
 app.set("view engine", "ejs");
@@ -39,6 +42,13 @@ app.get("/details/:id", async (req, res, next) => {
   const userInfo = await dataBase.findById(id);
   console.log(userInfo);
   res.render("details", { userInfo });
+});
+
+app.get("/edit/:id", async (req, res) => {
+  const { id } = req.params;
+  const data = await dataBase.findById(id);
+  console.log(data);
+  res.render("edit", { data });
 });
 
 app.post("/found", upload.single("image"), async (req, res, next) => {
@@ -75,6 +85,28 @@ app.post("/search", async (req, res) => {
       }
     }
   );
+});
+app.delete("/delete/:id", async (req, res) => {
+  const { id } = req.params;
+  const deletedItem = await dataBase.findByIdAndDelete(id);
+  res.redirect("/lost");
+});
+app.put("/edit/:id", upload.single("image"), async (req, res, next) => {
+  const { id } = req.params;
+  const { name, contact, email, itemName, location, description } = req.body;
+  const imgurl = req.file.path;
+  const imgfilename = req.file.filename;
+  let toUpload = await dataBase.findByIdAndUpdate(id, {
+    name,
+    contact,
+    email,
+    itemName,
+    location,
+    description,
+    image: [{ url: imgurl, filename: imgfilename }],
+  });
+  console.log("The New Info:: " + toUpload);
+  res.redirect(`/details/${toUpload._id}`);
 });
 app.listen(3000, () => {
   console.log("On Port 3000!!!");
