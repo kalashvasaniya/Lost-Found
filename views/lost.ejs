@@ -42,20 +42,20 @@
                   src="<%=i.url%>" alt="<%=i.filename%>" />
                 <% } %>
             </div>
-            <div class="p-6 px-20 pl-32 text-gray-400 bg-gray-800 rounded-lg py-8 md:w-[120%]">
-              <h2 class="text-xl flex justify-center font-medium text-blue-700 underline underline-offset-2 mb-3">
+            <div class="mx-12 md:mx-0 md:p-6 px-12 md:px-20 md:pl-32 text-gray-400 bg-gray-800 rounded-lg py-8 md:w-[120%]">
+              <h2 class="text-sm md:text-xl flex justify-center font-medium text-blue-700 underline underline-offset-2 mb-3">
                 <%= data.itemName %>
               </h2>
-              <h1 class="text-lg font-medium text-white mb-1">
+              <h1 class="text-sm md:text-lg flex justify-center font-medium text-white mb-1">
                 Found By: <%=data.name%>
               </h1>
-              <h1 class="text-lg font-medium text-white mb-1">
+              <h1 class="text-sm md:text-lg flex justify-center font-medium text-white mb-1">
                 Found At: <%=data.location %>
               </h1>
-              <p class="mb-5">
+              <p class="mb-5 flex justify-center">
                 <%= data.description %>
               </p>
-              <div class="text-blue-700">
+              <div class="text-blue-700 flex justify-center">
                 <a href="/details/<%= data._id %> "> Details --> </a>
               </div>
             </div>
