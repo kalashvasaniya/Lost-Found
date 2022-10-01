@@ -16,4 +16,4 @@ The main idea was to create a platform where the students can easily locate the 
 <br>
 <br>
 <br>
-<img style="padding-left:100px"  align="center" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="coding">
+<img align="center" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="coding">
