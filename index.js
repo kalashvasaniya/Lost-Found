@@ -57,6 +57,25 @@ app.post("/found", upload.single("image"), async (req, res, next) => {
   await toUpload.save();
   res.redirect('/');
 });
+app.post("/search", async (req, res) => {
+  const { key } = req.body;
+  console.log(key);
+  dataBase.find(
+    {
+      itemName: { $regex: key, $options: "i" },
+    },
+    function (err, docs) {
+      if (err) {
+        console.log(err);
+        return res.send("We Ran into an Error");
+      } else {
+        const userData = docs;
+        console.log(userData);
+        res.render("search", { userData, key });
+      }
+    }
+  );
+});
 app.listen(3000, () => {
   console.log("On Port 3000!!!");
 });
