@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Found</title>
+    <title>Edit <%=data.itemName%></title>
 </head>
 
 <style>
@@ -35,7 +35,7 @@
     <div class="md:mx-0 mx-4 text-white">
         <h2
             class="flex justify-center font-extrabold text-4xl uppercase underline decoration-gray-400 underline-offset-8">
-            Found an item!</h2>
+             <%=data.itemName%></h2>
         <form class="dark:bg-slate-900 mt-12 relative rounded-xl p-6" action="/edit/<%=data._id%>?_method=PUT"
             method="post" enctype="multipart/form-data">
             <div class="userInfo">
