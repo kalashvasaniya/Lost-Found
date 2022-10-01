@@ -30,6 +30,7 @@
     </div>
   </form>
 
+<<<<<<< HEAD
   <% for(let data of userData){ %>
 
     <div class="container pb-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
@@ -58,6 +59,29 @@
                     <a href="/details/<%= data._id %> "> Details --> </a>
                   </div>
                 </div>
+=======
+  <!-- <div class="image">
+    <% for(let data of userData){ %>
+      <% for(let i of data.image) {%>
+        <img src="<%=i.url%> " alt="<%=i.filename%>" srcset="" />
+        <% } %>
+          <% } %>
+  </div> -->
+  <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <section class="w-full space-y-10 ">
+      <div class="text-gray-400 bg-gray-900 flex justify-center items-center content-center rounded-lg py-8">
+        <img class="md:pl-20 justify-start md:w-[350px] md:h-[250px] w-full object-cover object-center"
+          src="/piclost&found.png" width="50%" alt="blog">
+        <div class="p-6 px-20">
+          <h2 class="text-xl flex justify-center font-medium text-white underline underline-offset-2 mb-3">itemName</h2>
+          <h1 class="text-lg font-medium text-white mb-1">name</h1>
+          <h1 class="text-lg font-medium text-white mb-1">location</h1>
+          <p class="mb-5">Dharansh, Yuvraj & adi teeno nalle fdf gdgs  gsfg fsg fd gfd gfs gsfdgdffdgdfg</p>
+          <div class="text-blue-500">
+            <a href="/details">
+              Details ->
+            </a>
+>>>>>>> 9f6139e9aa3c758c2d26d02dc6260ee4d38708b1
           </div>
       </section>
     </div>
