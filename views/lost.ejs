@@ -22,7 +22,7 @@
       </div>
       <input type="search" id="default-search"
         class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search Bottel, ID card..." required="" />
+        placeholder="Search Bottle, ID card..." required="" />
       <button type="submit"
         class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Search
@@ -32,32 +32,33 @@
 
   <% for(let data of userData){ %>
 
-    <div class="container pb-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="container pb-14 mx-auto px-8 md:px-14 lg:px-24 w-full">
       <section class="w-full ">
-        <div class="text-gray-400 bg-gray-900 flex justify-center items-center content-center rounded-lg py-8">
-          <div class="image">
-            <% for(let i of data.image) {%>
-              <img class="md:pl-20 justify-start md:w-[350px] md:h-[250px] w-full object-cover object-center"
-                src="<%=i.url%>" width="50%" alt="<%=i.filename%>" />
-              <% } %>
-
-                <div class="p-6 px-20">
-                  <h2 class="text-xl flex justify-center font-medium text-white underline underline-offset-2 mb-3">
-                    <%= data.itemName %>
-                  </h2>
-                  <h1 class="text-lg font-medium text-white mb-1">
-                    Found By: <%=data.name%>
-                  </h1>
-                  <h1 class="text-lg font-medium text-white mb-1">
-                    Found At: <%=data.location %>
-                  </h1>
-                  <p class="mb-5">
-                    <%= data.description %>
-                  </p>
-                  <div class="text-blue-500">
-                    <a href="/details/<%= data._id %> "> Details --> </a>
-                  </div>
-                </div>
+        <div class="text-gray-400 bg-gray-900 flex justify-start rounded-lg py-8">
+          <div class="image grid grid-cols-2">
+            <div class="">
+              <% for(let i of data.image) {%>
+                <img class="md:pl-20 justify-start md:w-[350px] md:h-[250px] w-full object-cover object-center"
+                  src="<%=i.url%>" alt="<%=i.filename%>" />
+                <% } %>
+            </div>
+            <div class="p-6 px-20 pl-32 text-gray-400 bg-gray-800 rounded-lg py-8 md:w-[120%]">
+              <h2 class="text-xl flex justify-center font-medium text-blue-700 underline underline-offset-2 mb-3">
+                <%= data.itemName %>
+              </h2>
+              <h1 class="text-lg font-medium text-white mb-1">
+                Found By: <%=data.name%>
+              </h1>
+              <h1 class="text-lg font-medium text-white mb-1">
+                Found At: <%=data.location %>
+              </h1>
+              <p class="mb-5">
+                <%= data.description %>
+              </p>
+              <div class="text-blue-700">
+                <a href="/details/<%= data._id %> "> Details --> </a>
+              </div>
+            </div>
           </div>
       </section>
     </div>
