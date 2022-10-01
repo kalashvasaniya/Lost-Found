@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
-    <title>Lost The Product</title>
-  </head>
-  <body>
-    <h1>All the Lost Item will be displayed here!!</h1>
-    <div class="image">
-      <% for(let data of userData){ %> <% for(let i of data.image) {%>
-      <img src="<%=i.url%> " alt="<%=i.filename%>" srcset="" />
-      <% } %> <% } %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <title>Lost The Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black">
+
+  <form class="p-8 px-80">
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+    <div class="relative">
+      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      <input type="search" id="default-search"
+        class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Search Bottel, ID card..." required="">
+      <button type="submit"
+        class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
     </div>
-  </body>
+  </form>
+
+  <!-- <div class="image">
+    <% for(let data of userData){ %>
+      <% for(let i of data.image) {%>
+        <img src="<%=i.url%> " alt="<%=i.filename%>" srcset="" />
+        <% } %>
+          <% } %>
+  </div> -->
+  <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <section class="w-full space-y-10">
+      <div class="text-gray-400 bg-gray-900 flex justify-center items-center content-center rounded-lg py-8">
+        <img class="md:pl-20 md:w-[350px] md:h-[250px] w-full object-cover object-center"
+          src="/public/piclost&found.png" width="50%" alt="blog">
+        <div class="p-6 px-20">
+          <h2 class="text-xl flex justify-center font-medium text-white underline underline-offset-2 mb-3">itemName</h2>
+          <h1 class="text-lg font-medium text-white mb-1">name</h1>
+          <h1 class="text-lg font-medium text-white mb-1">location</h1>
+          <p class="mb-5">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+            microdosing tousled waistcoat.</p>
+          <div class="text-blue-500">
+            <a href="/details">
+              Details ->
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
