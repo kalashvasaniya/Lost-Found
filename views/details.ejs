@@ -12,13 +12,13 @@
 
 <body class="bg-black text-white mt-20">
     <% for(let i of userInfo.image){ %>
-        <div class="flex flex-wrap justify-between px-64 items-center">
+        <div class="flex flex-wrap justify-center md:justify-between px-12 md:px-64 items-center">
             <div class="image border-8">
-                <img class=" justify-start w-[350px] h-[350px] md:w-[350px] md:h-[350px] object-cover object-center"
+                <img class="w-[350px] h-[350px] md:w-[350px] md:h-[350px] object-cover object-center"
                     src="<%=i.url%>" width="" alt="<%=i.filename%>" />
                 <% } %>
             </div>
-            <div class="Details text-xl font-extrabold space-y-8">
+            <div class="Details text-xl pt-10 md:pt-0 font-extrabold space-y-8">
                 <h3 class="">Found By: <%= userInfo.name %>
                 </h3>
                 <h3>Found At: <%= userInfo.location %>
