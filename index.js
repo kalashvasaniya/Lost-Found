@@ -33,6 +33,14 @@ app.get("/lost", async (req, res) => {
   const userData = await dataBase.find({});
   res.render("lost", { userData });
 });
+
+app.get("/details/:id", async (req, res, next) => {
+  const { id } = req.params;
+  const userInfo = await dataBase.findById(id);
+  console.log(userInfo);
+  res.render("details", { userInfo });
+});
+
 app.post("/found", upload.single("image"), async (req, res, next) => {
   const { name, contact, email, itemName, location, description } = req.body;
   imgurl = req.file.path;
@@ -47,7 +55,7 @@ app.post("/found", upload.single("image"), async (req, res, next) => {
     image: [{ url: imgurl, filename: imgfilename }],
   });
   await toUpload.save();
-  res.send(req.file);
+  res.redirect('/');
 });
 app.listen(3000, () => {
   console.log("On Port 3000!!!");

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Details of <%= userInfo.itemName %>
+    </title>
+</head>
+
+<body class="bg-black text-white mt-20">
+    <% for(let i of userInfo.image){ %>
+        <div class="flex flex-wrap justify-between px-80 items-center">
+            <div class="image border-8">
+                <img class="md:pl-20 justify-start md:w-[350px] md:h-[250px] w-full object-cover object-center"
+                    src="<%=i.url%>" width="50%" alt="<%=i.filename%>" />
+                <% } %>
+            </div>
+            <div class="Details text-xl font-extrabold space-y-4">
+                <h3 class="">Found By: <%= userInfo.name %>
+                </h3>
+                <h3>Found At: <%= userInfo.location %>
+                </h3>
+                <h3>Contact: <%= userInfo.contact %>
+                </h3>
+                <h3>Email: <%= userInfo.email %>
+                </h3>
+                <h3>Description: <%= userInfo.description %>
+                </h3>
+            </div>
+        </div>
+
+        <!-- <button><a href="/edit/<%= userInfo.id %> ">Edit</a></button>
+        <button><a href="/lost">Go Back</a></button>
+        <button><a href="/">Home Page</a></button> -->
+</body>
+
+</html>
