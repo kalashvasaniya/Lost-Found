@@ -17,3 +17,22 @@ The main idea was to create a platform where the students can easily locate the 
 <br>
 <br>
 <img align="center" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="coding">
+
+# Getting Started with Lost & Found
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm install nodemon`
+
+then,
+
+### `nodemon ./index.js`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+
+# Thank you!
