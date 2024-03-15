@@ -24,19 +24,9 @@
     [id] {
         scroll-margin-top: 100px;
     }
-
-    @media (min-width: 1000px) {
-        .bgb {
-            background-image: url('/public/Lost&Found2.jpg');
-            background-image: url('/LostSomething.mp4');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    }
 </style>
 
-<body class="text-white font-poppins bg-black bgb">
+<body class="text-white font-poppins bg-black">
 
     <!-- Navbar -->
     <nav class="fixed py-6 w-full bg-black z-50 toptobottom">
@@ -77,6 +67,11 @@
             </div>
         </div>
     </nav>
+
+    <video class="md:block hidden" autoplay muted loop id="bg-video">
+        <source src="/LostSomething.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
 
     <!-- Buttons -->
     <div
@@ -123,7 +118,8 @@
         <div class="pt-44 ml-36">
             <!-- <img src="/public/piclost&found.png" alt="Kalash"
                 class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright"> -->
-            <img src="/piclost&found.png" alt="Kalash" class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright invisible md:visible">
+            <img src="/piclost&found.png" alt="Kalash"
+                class="md:w-[30vw] md:mt-2 md:relative right-0 lefttoright invisible md:visible">
         </div>
     </div>
 
